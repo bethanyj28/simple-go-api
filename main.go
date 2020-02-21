@@ -15,7 +15,7 @@ func main() {
 
 	http.HandleFunc("/hello", sayHelloHandler)
 	http.HandleFunc("/add", addPeopleHandler)
-	http.HandleFunc("/person", personHandler)
+	http.HandleFunc("/person/", personHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
@@ -119,9 +119,9 @@ func deletePerson(nickname string) *Person {
 }
 
 func updatePerson(p *Person) {
-	for _, op := range community.People {
+	for i, op := range community.People {
 		if op.Nickname == p.Nickname {
-			op = p
+			community.People[i] = p
 			return
 		}
 	}
