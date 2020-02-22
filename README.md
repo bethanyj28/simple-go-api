@@ -13,3 +13,14 @@ Visit our [careers site](https://careers.redventures.com/) to learn about intern
 - [Bethany Janos](mailto:bjanos@redventures.com)
 - [Meredith Fronk](mailto:mfronk@redventures.com)
 - [Baylee Williams](mailto:bawilliams@redventures.com)
+
+## How to run
+`git clone <repo>`
+
+In that directory:
+
+`go build .`
+
+`go run .`
+
+Test via curl or Postman with base url `http://localhost:8080`
