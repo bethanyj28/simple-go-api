@@ -12,6 +12,20 @@ var community *People
 
 func main() {
 	community = &People{} // initialize an array of people
+	community.People = append(community.People, &Person{
+		Nickname:   "Superman",
+		FirstName:  "Cam",
+		MiddleName: "Jerrell",
+		LastName:   "Newton",
+		Age:        30,
+	})
+
+	community.People = append(community.People, &Person{
+		Nickname:  "Captain America",
+		FirstName: "Luke",
+		LastName:  "Kuechly",
+		Age:       28,
+	})
 
 	http.HandleFunc("/hello", sayHelloHandler)
 	http.HandleFunc("/add", addPeopleHandler)
